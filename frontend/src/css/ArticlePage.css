@@ -1,0 +1,92 @@
+.article-container {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Netflix Sans', sans-serif;
+}
+
+.article-header {
+  margin-bottom: 25px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff3c3c;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.headline {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin: 10px 0;
+  line-height: 1.2;
+}
+
+.subheadline {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.author-date {
+  font-size: 0.95rem;
+  color: #777;
+}
+
+/* Main top image */
+.article-main-img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Article content */
+.article-body {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: #333;
+}
+
+.article-section {
+  margin-bottom: 35px;
+}
+
+.article-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+/* Section images */
+.article-section-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 15px auto 0;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* States */
+.loading {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.2rem;
+}
+
+.error {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.1rem;
+  color: red;
+}

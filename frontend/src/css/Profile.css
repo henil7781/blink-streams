@@ -1,0 +1,72 @@
+.profile-edit-simple {
+  max-width: 500px;
+  margin: 60px auto;
+  font-family: Arial, sans-serif;
+}
+
+.profile-edit-simple h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-edit-simple label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.profile-edit-simple input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.save-btn, .cancel-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background: #e50914;
+  color: white;
+}
+
+.cancel-btn {
+  background: #ddd;
+}
+
+.msg {
+  color: green;
+  text-align: center;
+}
+.profile-preview {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.logout-btn {
+  margin-top: 10px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 15px;
+}
+
+.logout-btn:hover {
+  background-color: #cc0000;
+}
+.btn-group {
+  display: flex;
+  flex-direction: column; /* or row if you want side-by-side */
+  gap: 10px;
+}

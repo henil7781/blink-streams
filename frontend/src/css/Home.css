@@ -1,0 +1,11 @@
+.home {
+  padding: 30px;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+}
+
+.article-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

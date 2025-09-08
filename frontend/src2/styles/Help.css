@@ -1,0 +1,32 @@
+.help-container {
+  background: #0a0a23;
+  color: white;
+  padding: 2rem;
+  max-width: 100%;
+  margin: auto;
+  line-height: 1.7;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.help-container h2 {
+  font-size: 2rem;
+  color: #66f;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.help-container h3 {
+  margin-top: 1.5rem;
+  color: #88f;
+  font-size: 1.3rem;
+}
+
+.help-container ul {
+  margin: 0.5rem 0 1rem 1.5rem;
+}
+
+.help-container a {
+  color: #6cf;
+  text-decoration: none;
+  font-weight: bold;
+}

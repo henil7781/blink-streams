@@ -1,0 +1,24 @@
+[
+  {
+    "model": "magazine_backend.spotlightarticle",
+    "pk": 1,
+    "fields": {
+      "title": "Example Article",
+      "summary": "This is a short summary.",
+      "image_url": "https://example.com/image.jpg",
+      "article_url": "https://example.com/article",
+      "published_at": "2025-07-21T12:00:00Z"
+    }
+  },
+  {
+    "model": "magazine_backend.spotlightarticle",
+    "pk": 2,
+    "fields": {
+      "title": "Another Article",
+      "summary": "Another short summary.",
+      "image_url": "https://example.com/image2.jpg",
+      "article_url": "https://example.com/article2",
+      "published_at": "2025-07-20T14:30:00Z"
+    }
+  }
+]

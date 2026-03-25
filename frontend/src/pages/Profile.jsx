@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../css/Profile.css";
 import { useNavigate } from "react-router-dom";   // ✅ import here
+import { NODE_BASE_URL } from '../api/api';
 
 function Profile({ setUser }) {
   const token = localStorage.getItem("token");
@@ -76,7 +77,7 @@ const handleLogout = () => {
       }
 
       const res = await axios.put(
-        "http://localhost:5000/api/auth/update-profile",
+        `${NODE_BASE_URL}/api/auth/update-profile`,
         formData,
         {
           headers: {
@@ -108,7 +109,7 @@ const handleLogout = () => {
         <div className="preview-container">
           {previewUrl ? (
             <img 
-              src={previewUrl.startsWith("blob:") ? previewUrl : `http://localhost:5000${previewUrl}`} 
+              src={previewUrl.startsWith("blob:") ? previewUrl : `${NODE_BASE_URL}${previewUrl}`} 
               alt="Profile" 
               className="profile-preview" 
             />

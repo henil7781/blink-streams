@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import SearchModal from "./SearchModel";
 import "./../css/Navbar.css";
+import { NODE_BASE_URL } from '../api/api';
 import logo from "../assets/Logo.png"; // ✅ Correct import
 
 
@@ -43,7 +44,7 @@ const Navbar = ({ user, onLogout }) => {
                 <Link to="/profile" className="profile-link">
                   {user.profileImage ? (
                     <img 
-                      src={`http://localhost:5000${user.profileImage}`} 
+                      src={`${NODE_BASE_URL}${user.profileImage}`} 
                       alt="Profile" 
                       className="navbar-profile-img" 
                     />

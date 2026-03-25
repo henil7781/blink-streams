@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import "../css/Auth.css";
+import { NODE_BASE_URL } from '../api/api';
 
 export default function OtpVerify() {
   const [otpDigits, setOtpDigits] = useState(new Array(6).fill(""));
@@ -58,7 +59,7 @@ export default function OtpVerify() {
   const handleResend = async () => {
     setIsResending(true);
     try {
-      await axios.post("http://localhost:5000/api/auth/forgot-password", { email });
+      await axios.post(`${NODE_BASE_URL}/api/auth/forgot-password`, { email });
       setMessage("New OTP sent successfully! ✅");
       setTimer(60);
     } catch (err) {
@@ -74,7 +75,7 @@ export default function OtpVerify() {
     if (otpCode.length < 6) return setMessage("Please enter all 6 digits");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/verify-otp", {
+      const res = await axios.post(`${NODE_BASE_URL}/api/auth/verify-otp`, {
         email,
         otp: otpCode,
       });

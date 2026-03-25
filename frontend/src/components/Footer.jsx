@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../css/Footer.css";
+import { NODE_BASE_URL } from '../api/api';
 import logo from "../assets/Logo.png"; // ✅ Correct import
 
 export default function Footer() {
@@ -53,7 +54,7 @@ export default function Footer() {
               <Link to="/profile" className="profile-footer-link">
                 {user.profileImage ? (
                   <img
-                    src={`http://localhost:5000${user.profileImage}`}
+                    src={`${NODE_BASE_URL}${user.profileImage}`}
                     alt="Profile"
                     className="footer-profile-img"
                   />

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../css/Auth.css";
+import { NODE_BASE_URL } from '../api/api';
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState("");
@@ -11,7 +12,7 @@ export default function ForgotPassword() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/forgot-password", { email });
+      const res = await axios.post(`${NODE_BASE_URL}/api/auth/forgot-password`, { email });
       setMessage(res.data.message || res.data.msg);
       localStorage.setItem("reset_email", email);
       navigate("/verify-otp");

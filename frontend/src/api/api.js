@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-export const DJANGO_BASE_URL = process.env.REACT_APP_DJANGO_URL || 'http://localhost:8000';
+export const DJANGO_BASE_URL = process.env.REACT_APP_DJANGO_URL || 'https://blink-streams.onrender.com';
+export const NODE_BASE_URL = process.env.REACT_APP_NODE_URL || 'http://localhost:5000';
 
 const api = axios.create({
   baseURL: `${DJANGO_BASE_URL}/api`,

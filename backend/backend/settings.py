@@ -24,9 +24,9 @@ env = environ.Env(
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 SECRET_KEY = env('SECRET_KEY', default='django-insecure-fallback-key')
-DEBUG = env.bool('DEBUG', default=False)
+DEBUG = True
 
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1', '.onrender.com', 'blink-streams.onrender.com'])
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 INSTALLED_APPS = [

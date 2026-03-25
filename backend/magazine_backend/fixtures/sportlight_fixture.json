@@ -1,0 +1,20 @@
+[
+  {
+    "model": "magazine_backend.spotlightarticle",
+    "pk": 1,
+    "fields": {
+      "title": "Exclusive Interview with Stranger Things Cast",
+      "image": "https://via.placeholder.com/300x200",
+      "description": "We sat down with the cast to discuss surprises in the next season!"
+    }
+  },
+  {
+    "model": "magazine_backend.spotlightarticle",
+    "pk": 2,
+    "fields": {
+      "title": "Top 10 Netflix Originals You Must Watch",
+      "image": "https://via.placeholder.com/300x200",
+      "description": "These original series are dominating the charts in 2025!"
+    }
+  }
+]

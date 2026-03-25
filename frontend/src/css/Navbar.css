@@ -1,0 +1,298 @@
+/* Navbar container */
+.navbar {
+  background: #000;
+  color: #fff;
+  font-family: 'Inter', 'Netflix Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease;
+  padding: 10px 0;
+}
+
+.navbar.show {
+  transform: translateY(0);
+}
+
+.navbar.hide {
+  transform: translateY(-100%);
+}
+
+body {
+  padding-top: 220px;
+}
+
+/* Top Row: Sign In, Logo, Search */
+.navbar-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 40px 10px 40px;
+  position: relative;
+  min-height: 10px;
+}
+
+.signin-btn, .join-btn, .logout-btn {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.join-btn {
+  background: #E50914; /* Netflix Red */
+  margin-left: 10px;
+}
+
+.join-btn:hover {
+  background: #f40612;
+}
+
+.signin-btn:hover, .logout-btn:hover {
+  background: #444;
+}
+
+.user-profile-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navbar-profile-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #E50914;
+}
+
+.profile-initials {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #E50914;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.profile-link:hover {
+  color: #E50914;
+}
+
+.tudum-logo {
+  font-size: 80px;
+  font-weight: 900;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: -2px;
+  line-height: 1;
+  font-family: 'Arial Black', sans-serif;
+  /* Fallback for bold look */
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  /* Slightly adjusted for better visual centering given bottom padding */
+  transform: translate(-50%, -50%);
+}
+
+.search-button-tudum {
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* Middle Row: Navigation Links */
+.navbar-mid-row {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  margin-top: 20px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+.nav-links li a:hover {
+  color: #ccc;
+}
+
+.active-link {
+  position: relative;
+}
+
+.active-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
+/* Bottom Row: Popular Ticker */
+.navbar-bottom-row {
+  display: flex;
+  align-items: center;
+  padding: 12px 40px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.ticker-label {
+  color: #fff;
+  margin-right: 15px;
+}
+
+.ticker-separator {
+  color: rgba(255, 255, 255, 0.4);
+  margin-right: 15px;
+}
+
+.ticker-content {
+  display: flex;
+  gap: 20px;
+}
+
+.ticker-item {
+  color: #fff;
+  cursor: pointer;
+}
+
+.ticker-item:hover {
+  text-decoration: underline;
+}
+
+/* Hide scrollbar for ticker */
+.navbar-bottom-row::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar-bottom-row {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .tudum-logo {
+    font-size: 50px;
+  }
+
+  .navbar-mid-row {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  body {
+    padding-top: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-top-row {
+    padding: 10px 20px;
+  }
+
+  .signin-btn {
+    padding: 6px 15px;
+    font-size: 12px;
+  }
+
+  .tudum-logo {
+    font-size: 40px;
+  }
+
+  .navbar-bottom-row {
+    padding: 10px 20px;
+    font-size: 11px;
+  }
+}
+
+.main-nav.open {
+  background: #111;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.main-nav.open ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main-nav.open ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  display: block;
+  padding: 10px 0;
+}

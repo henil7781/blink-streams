@@ -1,0 +1,152 @@
+.profile-edit-simple {
+  max-width: 650px;
+  margin: 140px auto 60px; /* Offset for large navbar */
+  padding: 40px;
+  background: #141414;
+  color: #fff;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.profile-edit-simple h1 {
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.profile-edit-simple label {
+  display: block;
+  margin: 15px 0 8px;
+  font-weight: 600;
+  color: #808080;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.profile-edit-simple input {
+  width: 100%;
+  padding: 14px;
+  background: #2a2a2a;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.profile-edit-simple input:focus {
+  outline: none;
+  background: #333;
+  border-color: #E50914;
+}
+
+.profile-edit-simple input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.preview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile-preview {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #E50914;
+  margin-bottom: 15px;
+}
+
+.file-input-label {
+  background: transparent;
+  color: #E50914;
+  border: 1px solid #E50914;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.file-input-label:hover {
+  background: #E50914;
+  color: #fff;
+}
+
+.profile-edit-simple h3 {
+  margin-top: 40px;
+  font-size: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.save-btn {
+  flex: 2;
+  padding: 15px;
+  background: #E50914;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.save-btn:hover {
+  transform: scale(1.02);
+  background: #f40612;
+}
+
+.logout-btn-profile {
+  flex: 1;
+  padding: 15px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.logout-btn-profile:hover {
+  background: #333;
+  border-color: #666;
+}
+
+.msg {
+  background: rgba(0, 128, 0, 0.2);
+  color: #00ff00;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.profile-initials-large {
+  background: #E50914;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 60px;
+}

@@ -1,0 +1,167 @@
+/* Full page background */
+.auth-container {
+  background: url("../assets/background.jpg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Semi-transparent overlay card */
+.auth-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 40px;
+  width: 380px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.6);
+}
+
+/* Auth form */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.auth-form input {
+  margin: 8px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+  font-size: 15px;
+}
+
+.auth-form input:focus {
+  outline: 2px solid #e50914;
+}
+
+/* Main button */
+.auth-form button {
+  padding: 12px;
+  margin-top: 12px;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+  background-color: #b20710;
+}
+
+/* Switch between login/signup */
+.switch-auth {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+  color: #ccc;
+}
+
+.switch-auth a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Forgot link */
+.forgot-link {
+  text-align: right;
+  margin-top: 8px;
+}
+
+.forgot-link a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+/* Error message */
+.auth-message {
+  color: #e50914;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Premium OTP Section */
+.otp-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.otp-subtitle {
+  color: #ccc;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.otp-subtitle strong {
+  color: white;
+}
+
+.otp-inputs {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.otp-box {
+  width: 40px;
+  height: 50px;
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  color: white;
+  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.otp-box:focus {
+  outline: none;
+  border-color: #e50914;
+  background-color: #444;
+  box-shadow: 0 0 8px rgba(229, 9, 20, 0.4);
+}
+
+.otp-box.filled {
+  border-color: #666;
+}
+
+.resend-container {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
+  text-align: center;
+}
+
+.resend-link {
+  color: #e50914;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.resend-link:disabled {
+  color: #555;
+  cursor: not-allowed;
+}
+
+.resend-timer {
+  color: #ccc;
+  font-family: monospace;
+}
